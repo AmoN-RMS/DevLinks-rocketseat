@@ -20,22 +20,15 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   background: var(--bg-url) no-repeat top center/cover;
   font-family: var(--main-font);
-  font-weight: 300;
   color: var(--text-color);
-  width: 360px;
-  height: 800px;
-  margin: auto;
-
 }
 
 .container {
-  padding: 0 1.5em;
-
+  width: 100%;
+  max-width: 588px;
+  margin: 56px auto;
 }
 
 .container__profile {
@@ -86,7 +79,7 @@ body {
   flex-direction: column;
   text-align: center;
   gap: 1em;
-  padding: 1.5em 0;
+  padding: 1.5em;
 }
 
 .container__anchor {
@@ -110,14 +103,14 @@ body {
 .container__social {
   display: flex;
   justify-content: center;
-  gap: 1em;
-  padding: 1.5em 0;
+  gap: 0.7em;
+  padding: 1.5em;
 }
 
 .social {
   padding: 0.5em;
   color: var(--text-color);
-  font-size: 28px;
+  font-size: 26px;
 
 }
 
@@ -128,7 +121,7 @@ body {
 
 .footer {
   text-align: center;
-  padding: 24px 0;
+  padding: 24px;
   text-underline-position: from-font;
   font-size: 14px;
   font-weight: 400;
