@@ -1,0 +1,140 @@
+:root {
+  --text-color: #FFF;
+  --main-font: "Inter";
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --highlight-color: rgba(255, 255, 255, 0.20);
+  --surface-color-hover: rgba(255, 255, 255, 0.05);
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --bg-switch-url: url(./assets/MoonStars.svg);
+}
+
+.light {
+  --text-color: #000;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --bg-switch-url: url(./assets/Sun.svg);
+  --stroke-color: rgba(0, 0, 0, 0.50);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --highlight-color: rgba(0, 0, 0, 0.20);
+  --surface-color-hover: rgba(0, 0, 0, 0.15);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--bg-url) no-repeat top center/cover;
+  font-family: var(--main-font);
+  font-weight: 300;
+  color: var(--text-color);
+  width: 360px;
+  height: 800px;
+  margin: auto;
+
+}
+
+.container {
+  padding: 0 1.5em;
+
+}
+
+.container__profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  padding: 1.5em;
+}
+
+.container__switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+
+.container__switch button {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  padding: 0px;
+  background: #FFF var(--bg-switch-url) no-repeat center;
+  border-radius: 50%;
+  border: 0;
+  z-index: 1;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.light .container__switch button {
+  right: 0;
+  left: initial;
+}
+
+.container__switch span {
+  display: block;
+  width: 62px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 9999px;
+  backdrop-filter: blur(4px);
+}
+
+.container__links {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1em;
+  padding: 1.5em 0;
+}
+
+.container__anchor {
+  padding: 1em 1.5em;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  border: 1px solid var(--stroke-color);
+  border-radius: 0.5em;
+  background: var(--surface-color);
+  backdrop-filter: blur(4px);
+  line-height: 150%;
+  transition: all 0.2s;
+}
+
+.container__anchor:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+.container__social {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  padding: 1.5em 0;
+}
+
+.social {
+  padding: 0.5em;
+  color: var(--text-color);
+  font-size: 28px;
+
+}
+
+.social:hover {
+  background: var(--highlight-color);
+  border-radius: 50%;
+}
+
+.footer {
+  text-align: center;
+  padding: 24px 0;
+  text-underline-position: from-font;
+  font-size: 14px;
+  font-weight: 400;
+
+}
+
+.highlight {
+  text-decoration: underline;
+}
