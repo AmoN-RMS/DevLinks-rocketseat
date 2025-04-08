@@ -131,3 +131,13 @@ body {
 .highlight {
   text-decoration: underline;
 }
+
+@media screen and (min-width: 728px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg)
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg)
+  }
+}
