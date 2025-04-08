@@ -23,6 +23,7 @@ body {
   background: var(--bg-url) no-repeat top center/cover;
   font-family: var(--main-font);
   color: var(--text-color);
+  height: 100vh;
 }
 
 .container {
@@ -57,11 +58,18 @@ body {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
+  animation: slide-out 0.3s;
+}
+
+.container__switch button:hover {
+  outline: 8px solid var(--highlight-color);
+  border-radius: 50%;
+
+
 }
 
 .light .container__switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.3s forwards;
 }
 
 .container__switch span {
@@ -132,12 +140,32 @@ body {
   text-decoration: underline;
 }
 
-@media screen and (min-width: 728px) {
+@media screen and (min-width: 700px) {
   :root {
-    --bg-url: url(./assets/bg-desktop.jpg)
+    --bg-url: url(./assets/bg-desktop.jpg);
   }
 
   .light {
-    --bg-url: url(./assets/bg-desktop-light.jpg)
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    left: 50%;
+  }
+
+  to {
+    left: 0;
   }
 }
