@@ -23,13 +23,13 @@ body {
   background: var(--bg-url) no-repeat top center/cover;
   font-family: var(--main-font);
   color: var(--text-color);
-  height: 100vh;
+
 }
 
 .container {
   width: 100%;
   max-width: 588px;
-  margin: 56px auto;
+  margin: 28px auto;
 }
 
 .container__profile {
